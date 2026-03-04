@@ -3,10 +3,14 @@ name: CI Parallel Jobs
 on:
     push:
         branches: ["main"]
+    pull_request:
+        branches: ["main"]
 
 jobs:
     lint:
         runs-on: ubuntu-latest
+        env:
+            API_KEY: ${{ secrets.API_KEY }}
 
         steps:
             - name: Checkout code
