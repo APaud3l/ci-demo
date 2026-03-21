@@ -17,3 +17,13 @@ resource "local_file" "hello" {
   filename = var.file_name
   content  = var.file_content
 }
+
+resource "local_file" "hello1" {
+  filename = var.file_name
+  content  = var.file_content
+}
+
+resource "local_file" "hello2" {
+  filename = var.file_name
+  content  = var.file_content
+}
